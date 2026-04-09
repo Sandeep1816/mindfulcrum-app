@@ -9,11 +9,12 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-5">
             <Image
-              src="/images/Mindfulcrum.png"
+              src="/images/Mindfulcrum_Banner.png"
               alt="Mindfulcrum — Workplace Psychology"
               width={400}
               height={100}
-              className="h-16 w-auto max-w-[360px] object-contain object-left brightness-0 invert sm:h-20"
+              className="h-auto max-h-16 w-full max-w-full object-contain object-left brightness-0 invert sm:max-h-20 sm:w-auto sm:max-w-[min(100%,360px)]"
+              sizes="(max-width: 640px) 100vw, 360px"
             />
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-gray-400">
               Signifying a pivotal point for mental balance
@@ -60,7 +61,10 @@ export function Footer() {
             <ul className="mt-5 space-y-4 text-sm">
               <li className="flex gap-3">
                 <Mail size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
-                <a href="mailto:hello@mindfulcrum.com" className="leading-snug hover:text-white transition-colors">
+                <a
+                  href="mailto:hello@mindfulcrum.com"
+                  className="min-w-0 break-words leading-snug transition-colors hover:text-white"
+                >
                   hello@mindfulcrum.com
                 </a>
               </li>

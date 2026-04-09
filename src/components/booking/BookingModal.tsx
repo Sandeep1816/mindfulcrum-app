@@ -133,7 +133,11 @@ export function BookingModal({ therapist, open, onClose }: Props) {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-3 sm:p-6" role="dialog" aria-modal="true">
+    <div
+      className="fixed inset-0 z-[100] flex min-h-0 items-center justify-center overflow-y-auto overscroll-contain p-3 py-[max(0.75rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:p-6"
+      role="dialog"
+      aria-modal="true"
+    >
       <button
         type="button"
         className="absolute inset-0 bg-[#0f172a]/55 backdrop-blur-[2px]"
@@ -141,7 +145,7 @@ export function BookingModal({ therapist, open, onClose }: Props) {
         onClick={onClose}
       />
 
-      <div className="relative z-10 flex max-h-[min(92vh,880px)] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-2xl">
+      <div className="relative z-10 my-auto flex max-h-[min(100dvh-1.5rem,880px)] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-2xl sm:max-h-[min(92vh,880px)]">
         {success ? (
           <div className="flex flex-1 flex-col items-center justify-center px-6 py-14 text-center">
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50">
@@ -277,7 +281,7 @@ export function BookingModal({ therapist, open, onClose }: Props) {
                       <Icon size={18} className="text-[#c92a2a]" strokeWidth={2} />
                       {TIME_SLOT_GROUPS[key].label}
                     </div>
-                    <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
                       {TIME_SLOT_GROUPS[key].slots.map((t) => {
                         const selected = slot === t;
                         return (

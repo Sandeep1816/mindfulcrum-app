@@ -8,10 +8,10 @@ export function CorporateProgramsPage() {
       <section className="bg-[#1e3a5f] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
               Corporate Mental Health Programs
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg text-gray-200 sm:text-xl">
               Structured 3, 6 & 12-month programs designed to improve employee wellbeing, strengthen leadership & create healthier workplace cultures.
             </p>
           </div>
@@ -281,7 +281,7 @@ export function CorporateProgramsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="mb-8 text-lg text-gray-200 sm:text-xl">
             Let's discuss which program is right for your organization
           </p>
           <Link

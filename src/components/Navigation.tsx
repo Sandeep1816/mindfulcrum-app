@@ -5,20 +5,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { MAIN_NAV_LINKS } from "@/data/site-navigation";
 
 export function Navigation() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/corporate-programs", label: "Corporate Programs" },
-    { path: "/corporate-audit", label: "Leadership Audit" },
-    { path: "/school-programs", label: "School Programs" },
-    { path: "/resources", label: "Resources" },
-    { path: "/about", label: "About" },
-    { path: "/contact", label: "Contact" },
-  ];
+  const navLinks = MAIN_NAV_LINKS;
 
   const isActive = (path: string) => {
     if (path === "/") return pathname === "/";
@@ -43,7 +36,7 @@ export function Navigation() {
         <div className="flex min-h-[5.25rem] items-center justify-between gap-4 sm:gap-6 lg:min-h-24">
           <Link
             href="/"
-            className="relative flex shrink-0 items-center py-1"
+            className="relative flex min-w-0 max-w-[min(100%,calc(100vw-5.5rem))] shrink items-center py-1 sm:max-w-none"
             onClick={() => setMobileMenuOpen(false)}
           >
             <Image
@@ -51,8 +44,9 @@ export function Navigation() {
               alt="Mindfulcrum — Workplace Psychology"
               width={400}
               height={100}
-              className="h-14 w-auto sm:h-16 md:h-20"
+              className="h-auto w-full max-h-12 object-contain object-left sm:max-h-14 sm:w-auto md:max-h-16 lg:max-h-20"
               priority
+              sizes="(max-width: 640px) 70vw, 400px"
             />
           </Link>
 

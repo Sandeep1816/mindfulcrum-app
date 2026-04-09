@@ -61,7 +61,7 @@ export function ResourcesPage() {
                 {section.blocks.map((block) => (
                   <li key={`${section.state}-${block.name}`} className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
                     <h3 className="font-semibold text-[#1e3a5f]">{block.name}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-gray-700">{block.detail}</p>
+                    <p className="mt-2 break-words text-sm leading-relaxed text-gray-700">{block.detail}</p>
                   </li>
                 ))}
               </ul>

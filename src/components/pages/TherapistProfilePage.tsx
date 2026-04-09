@@ -77,9 +77,12 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
               />
             </div>
             <div className="flex-1">
-              <div className="flex items-start justify-between mb-4">
-                <div>
-                  <h1 className="text-3xl font-bold text-[#1e3a5f] mb-1" itemProp="name">
+              <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                <div className="min-w-0">
+                  <h1
+                    className="mb-1 break-words text-2xl font-bold text-[#1e3a5f] sm:text-3xl"
+                    itemProp="name"
+                  >
                     {therapist.name}
                   </h1>
                   <p className="text-lg text-gray-600 mb-2" itemProp="jobTitle">
@@ -90,13 +93,13 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                   </div>
                 </div>
                 {therapist.badge && (
-                  <div className="bg-green-100 text-green-700 px-4 py-2 rounded-full font-semibold">
+                  <div className="shrink-0 self-start rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700 sm:text-base">
                     👍 {therapist.badge}
                   </div>
                 )}
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+              <div className="mb-4 grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4">
                 <div className="flex items-center space-x-2">
                   <Star className="text-amber-400 fill-amber-400" size={20} />
                   <div>
@@ -216,7 +219,7 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                   {/* Day Selection */}
                   <div className="mb-6">
                     <h3 className="font-semibold text-gray-900 mb-3">Select a Date</h3>
-                    <div className="grid grid-cols-5 gap-2">
+                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
                       {days.map((day, idx) => (
                         <button
                           key={idx}
@@ -243,12 +246,12 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                     {/* Morning */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Morning</h3>
-                      <div className="grid grid-cols-4 gap-2">
+                      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
                         {timeSlots.morning.map((slot) => (
                           <button
                             key={slot}
                             onClick={() => setSelectedSlot(slot)}
-                            className={`px-4 py-2.5 rounded-lg border-2 text-sm font-medium transition-all ${
+                            className={`rounded-lg border-2 px-2 py-2 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm ${
                               selectedSlot === slot
                                 ? "border-[#c92a2a] bg-[#c92a2a] text-white"
                                 : "border-gray-200 hover:border-[#c92a2a] text-gray-700"
@@ -263,12 +266,12 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                     {/* Afternoon */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Afternoon</h3>
-                      <div className="grid grid-cols-4 gap-2">
+                      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
                         {timeSlots.afternoon.map((slot) => (
                           <button
                             key={slot}
                             onClick={() => setSelectedSlot(slot)}
-                            className={`px-4 py-2.5 rounded-lg border-2 text-sm font-medium transition-all ${
+                            className={`rounded-lg border-2 px-2 py-2 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm ${
                               selectedSlot === slot
                                 ? "border-[#c92a2a] bg-[#c92a2a] text-white"
                                 : "border-gray-200 hover:border-[#c92a2a] text-gray-700"
@@ -283,12 +286,12 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                     {/* Evening */}
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Evening</h3>
-                      <div className="grid grid-cols-4 gap-2">
+                      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
                         {timeSlots.evening.map((slot) => (
                           <button
                             key={slot}
                             onClick={() => setSelectedSlot(slot)}
-                            className={`px-4 py-2.5 rounded-lg border-2 text-sm font-medium transition-all ${
+                            className={`rounded-lg border-2 px-2 py-2 text-xs font-medium transition-all sm:px-4 sm:py-2.5 sm:text-sm ${
                               selectedSlot === slot
                                 ? "border-[#c92a2a] bg-[#c92a2a] text-white"
                                 : "border-gray-200 hover:border-[#c92a2a] text-gray-700"
@@ -306,20 +309,22 @@ export function TherapistProfilePage({ therapistId }: { therapistId: string }) {
                     <div className="mt-8 p-6 bg-gray-50 rounded-lg border-2 border-[#c92a2a]/20">
                       <h3 className="font-semibold text-gray-900 mb-3">Booking Summary</h3>
                       <div className="space-y-2 text-sm mb-4">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Date:</span>
-                          <span className="font-medium text-gray-900">{days[selectedDay].label}, {days[selectedDay].date}</span>
+                        <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                          <span className="shrink-0 text-gray-600">Date:</span>
+                          <span className="min-w-0 break-words font-medium text-gray-900 sm:text-right">
+                            {days[selectedDay].label}, {days[selectedDay].date}
+                          </span>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Time:</span>
+                        <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                          <span className="shrink-0 text-gray-600">Time:</span>
                           <span className="font-medium text-gray-900">{selectedSlot}</span>
                         </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Duration:</span>
+                        <div className="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                          <span className="shrink-0 text-gray-600">Duration:</span>
                           <span className="font-medium text-gray-900">45 minutes</span>
                         </div>
-                        <div className="flex justify-between pt-2 border-t border-gray-300">
-                          <span className="text-gray-900 font-semibold">Total:</span>
+                        <div className="flex flex-col gap-1 border-t border-gray-300 pt-2 sm:flex-row sm:items-center sm:justify-between">
+                          <span className="font-semibold text-gray-900">Total:</span>
                           <span className="text-xl font-bold text-[#c92a2a]">₹{therapist.pricePerSession}</span>
                         </div>
                       </div>

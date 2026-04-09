@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { NavigationJsonLd } from "@/components/seo/NavigationJsonLd";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { getSiteUrl, siteSeo } from "@/lib/seo/config";
 import "./globals.css";
@@ -49,6 +50,13 @@ export const metadata: Metadata = {
   category: "health",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#1e3a5f",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -56,10 +64,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-IN">
-      <body className="min-h-screen flex flex-col bg-white antialiased text-[#1e3a5f]">
+      <body className="flex min-h-screen min-w-0 flex-col overflow-x-hidden bg-white font-sans antialiased text-[#1e3a5f]">
         <SiteJsonLd />
+        <NavigationJsonLd />
         <Navigation />
-        <main className="flex-1">{children}</main>
+        <main className="min-w-0 flex-1 overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

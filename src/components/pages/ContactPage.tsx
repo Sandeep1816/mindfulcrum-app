@@ -61,10 +61,10 @@ export function ContactPage() {
       <section className="bg-[#1e3a5f] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
               Get in Touch
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg text-gray-200 sm:text-xl">
               Ready to transform your organization's mental health approach? We'd love to hear from you.
             </p>
           </div>
@@ -88,7 +88,10 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a href="mailto:hello@mindfulcrum.com" className="text-gray-600 hover:text-indigo-600">
+                    <a
+                      href="mailto:hello@mindfulcrum.com"
+                      className="break-all text-gray-600 hover:text-indigo-600"
+                    >
                       hello@mindfulcrum.com
                     </a>
                     <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>

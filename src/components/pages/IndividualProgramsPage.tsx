@@ -10,10 +10,10 @@ export function IndividualProgramsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              <h1 className="mb-6 text-3xl font-bold sm:text-4xl md:text-5xl">
                 Individual & Family Therapy
               </h1>
-              <p className="text-xl text-gray-200 mb-6">
+              <p className="mb-6 text-lg text-gray-200 sm:text-xl">
                 Professional one-on-one online therapy sessions with certified psychologists
               </p>
               <p className="text-lg text-gray-200">
@@ -309,7 +309,7 @@ export function IndividualProgramsPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Take the First Step?
           </h2>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="mb-8 text-lg text-gray-200 sm:text-xl">
             Connect with a certified psychologist today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

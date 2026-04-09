@@ -11,10 +11,10 @@ export function TherapyBookingPage() {
       <section className="bg-[#1e3a5f] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">
               Book Your Therapy Session
             </h1>
-            <p className="text-xl text-gray-200">
+            <p className="text-lg text-gray-200 sm:text-xl">
               Connect with certified psychologists for online 1:1 therapy sessions
             </p>
           </div>
@@ -30,7 +30,7 @@ export function TherapyBookingPage() {
                 <span className="font-semibold text-gray-900">{therapists.length} therapists</span> available for immediate booking
               </p>
             </div>
-            <div className="flex items-center space-x-4 text-sm">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
               <div className="flex items-center space-x-1 text-gray-600">
                 <Calendar size={16} className="text-[#c92a2a]" />
                 <span>Flexible scheduling</span>
@@ -51,20 +51,20 @@ export function TherapyBookingPage() {
             {therapists.map((therapist) => (
               <div key={therapist.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow border border-gray-200">
                 <div className="p-6">
-                  <div className="flex items-start space-x-4 mb-4">
+                  <div className="mb-4 flex flex-col gap-4 sm:flex-row sm:items-start sm:space-x-4">
                     <img
                       src={therapist.image}
                       alt={therapist.name}
-                      className="w-20 h-20 rounded-full object-cover border-4 border-gray-100"
+                      className="h-20 w-20 shrink-0 rounded-full border-4 border-gray-100 object-cover"
                     />
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between">
-                        <div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="min-w-0">
                           <h3 className="text-xl font-bold text-[#1e3a5f]">{therapist.name}</h3>
                           <p className="text-sm text-gray-600">{therapist.title}</p>
                         </div>
                         {therapist.badge && (
-                          <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                          <div className="shrink-0 self-start rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
                             👍 {therapist.badge}
                           </div>
                         )}
@@ -93,14 +93,14 @@ export function TherapyBookingPage() {
                     <p className="text-gray-700">{therapist.description}</p>
                   </div>
 
-                  <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <div className="flex flex-col gap-4 border-t border-gray-200 pt-4 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <span className="text-2xl font-bold text-[#1e3a5f]">₹{therapist.pricePerSession}</span>
                       <span className="text-sm text-gray-600"> per session</span>
                     </div>
                     <Link
                       href={`/therapist/${therapist.id}`}
-                      className="px-6 py-2.5 bg-[#c92a2a] text-white rounded-md hover:bg-[#b02525] transition-colors font-medium"
+                      className="inline-flex items-center justify-center rounded-md bg-[#c92a2a] px-6 py-2.5 text-center font-medium text-white transition-colors hover:bg-[#b02525] sm:inline-flex sm:shrink-0"
                     >
                       View Profile & Book
                     </Link>
@@ -108,8 +108,8 @@ export function TherapyBookingPage() {
                 </div>
 
                 {/* Quick Availability Preview */}
-                <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
-                  <div className="flex items-center justify-between text-sm">
+                <div className="border-t border-gray-200 bg-gray-50 px-6 py-4">
+                  <div className="flex flex-col gap-2 text-sm sm:flex-row sm:items-center sm:justify-between">
                     <div className="flex items-center space-x-2 text-gray-600">
                       <Clock size={16} className="text-[#c92a2a]" />
                       <span className="font-medium">Available Today:</span>

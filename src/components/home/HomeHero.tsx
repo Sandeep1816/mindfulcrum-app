@@ -11,10 +11,10 @@ export function HomeHero() {
       <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div className="order-2 lg:order-1">
-            <p className="mb-5 inline-flex items-center rounded-sm border border-white/20 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/95 backdrop-blur-sm">
+            <p className="mb-5 inline-flex max-w-full flex-wrap items-center rounded-sm border border-white/20 bg-white/5 px-3 py-2 text-[10px] font-semibold uppercase leading-snug tracking-[0.12em] text-white/95 backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.18em]">
               Where Psychology Powers High-Performing Workplaces
             </p>
-            <h1 className="font-serif text-4xl font-semibold leading-[1.12] tracking-tight md:text-5xl lg:text-[3.25rem] lg:leading-[1.1]">
+            <h1 className="font-serif text-[clamp(1.75rem,5vw+0.75rem,3.25rem)] font-semibold leading-[1.12] tracking-tight md:leading-[1.1]">
               Healthy Teams.
               <br />
               Strong Leaders.
@@ -31,7 +31,7 @@ export function HomeHero() {
             <div className="mt-10">
               <Link
                 href="/corporate-programs"
-                className="group inline-flex items-center gap-2 rounded-sm border border-[#c92a2a] bg-[#c92a2a] px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-black/10 transition-all hover:border-[#b02525] hover:bg-[#b02525]"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-sm border border-[#c92a2a] bg-[#c92a2a] px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-black/10 transition-all hover:border-[#b02525] hover:bg-[#b02525] sm:inline-flex sm:w-auto sm:px-8"
               >
                 <span>Explore Corporate Programs</span>
                 <ArrowRight
