@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin, Instagram } from "lucide-react";
 import { SITE_OFFICE_ADDRESS_LINES, siteSeo } from "@/lib/seo/config";
 
 export function ContactPage() {
@@ -105,8 +105,8 @@ export function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <a href="tel:+911234567890" className="text-gray-600 hover:text-indigo-600">
-                      +91 12345 67890
+                    <a href={`tel:${siteSeo.phone}`} className="text-gray-600 hover:text-indigo-600">
+                      {siteSeo.phoneDisplay}
                     </a>
                     <p className="text-sm text-gray-500 mt-1">Mon-Fri, 9am-6pm IST</p>
                   </div>
@@ -143,6 +143,23 @@ export function ContactPage() {
                       className="break-all text-gray-600 hover:text-indigo-600"
                     >
                       {siteSeo.linkedinUrl}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-pink-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Instagram className="text-pink-600" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">Instagram</h3>
+                    <a
+                      href={siteSeo.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="break-all text-gray-600 hover:text-indigo-600"
+                    >
+                      {siteSeo.instagramUrl}
                     </a>
                   </div>
                 </div>

@@ -32,7 +32,7 @@ export function SiteJsonLd() {
     ],
     knowsAbout,
     priceRange: "₹₹",
-    sameAs: [siteSeo.linkedinUrl],
+    sameAs: [siteSeo.linkedinUrl, siteSeo.instagramUrl],
   };
 
   const website = {

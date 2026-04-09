@@ -33,7 +33,11 @@ export const siteSeo = {
   ],
   locale: "en_IN",
   email: "vincent@mindfulcrum.in",
-  phone: "+911234567890",
+  /** E.164 for `tel:` and schema.org (no spaces) */
+  phone: "+917899366199",
+  /** Display format for UI */
+  phoneDisplay: "+91 78993 66199",
+  instagramUrl: "https://www.instagram.com/mind.fulcrum/",
   /** schema.org PostalAddress.streetAddress */
   streetAddress:
     "No 103 Shalom, Binnamangala 1st stage, Ecogrand Boutique Omes 10th Cross, Indiranagar",

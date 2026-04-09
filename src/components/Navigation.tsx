@@ -23,7 +23,7 @@ export function Navigation() {
     return [
       "relative flex h-16 items-center justify-center whitespace-nowrap lg:h-24",
       "px-3.5 sm:px-4 xl:px-5",
-      "text-sm font-medium transition-colors duration-200",
+      "text-[15px] font-semibold transition-colors duration-200 xl:text-base",
       active
         ? "text-[#1e3a5f] after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-[#c92a2a]"
         : "text-[#1e3a5f]/65 hover:text-[#1e3a5f]",
@@ -61,7 +61,7 @@ export function Navigation() {
           <div className="hidden lg:flex lg:shrink-0 lg:items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-sm border border-[#c92a2a] bg-[#c92a2a] px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:border-[#b02525] hover:bg-[#b02525]"
+              className="inline-flex items-center justify-center rounded-sm border border-[#c92a2a] bg-[#c92a2a] px-5 py-2.5 text-[15px] font-semibold text-white shadow-sm transition-colors hover:border-[#b02525] hover:bg-[#b02525] xl:text-base"
             >
               Request Pricing
             </Link>
@@ -86,7 +86,7 @@ export function Navigation() {
                   key={link.path}
                   href={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`block px-1 py-4 text-[15px] font-medium transition-colors sm:px-2 ${
+                  className={`block px-1 py-4 text-base font-semibold transition-colors sm:px-2 ${
                     isActive(link.path)
                       ? "text-[#c92a2a]"
                       : "text-[#1e3a5f]/80 hover:text-[#1e3a5f]"
@@ -99,7 +99,7 @@ export function Navigation() {
             <Link
               href="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-5 flex w-full items-center justify-center rounded-sm border border-[#c92a2a] bg-[#c92a2a] py-3.5 text-sm font-semibold text-white hover:bg-[#b02525]"
+              className="mt-5 flex w-full items-center justify-center rounded-sm border border-[#c92a2a] bg-[#c92a2a] py-3.5 text-base font-semibold text-white hover:bg-[#b02525]"
             >
               Request Pricing
             </Link>

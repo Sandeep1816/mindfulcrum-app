@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Instagram } from "lucide-react";
 import { SITE_OFFICE_ADDRESS_LINES, siteSeo } from "@/lib/seo/config";
 
 export function Footer() {
@@ -71,8 +71,8 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
-                <a href={`tel:${siteSeo.phone.replace(/\s/g, "")}`} className="leading-snug hover:text-white transition-colors">
-                  +91 12345 67890
+                <a href={`tel:${siteSeo.phone}`} className="leading-snug transition-colors hover:text-white">
+                  {siteSeo.phoneDisplay}
                 </a>
               </li>
               <li className="flex gap-3">
@@ -94,6 +94,17 @@ export function Footer() {
                   className="leading-snug transition-colors hover:text-white"
                 >
                   Mind Fulcrum Healthcare on LinkedIn
+                </a>
+              </li>
+              <li className="flex gap-3">
+                <Instagram size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
+                <a
+                  href={siteSeo.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-snug transition-colors hover:text-white"
+                >
+                  @mind.fulcrum on Instagram
                 </a>
               </li>
             </ul>
