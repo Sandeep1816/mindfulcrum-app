@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import { siteSeo } from "@/lib/seo/config";
 
 export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -89,10 +90,10 @@ export function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a
-                      href="mailto:hello@mindfulcrum.com"
+                      href={`mailto:${siteSeo.email}`}
                       className="break-all text-gray-600 hover:text-indigo-600"
                     >
-                      hello@mindfulcrum.com
+                      {siteSeo.email}
                     </a>
                     <p className="text-sm text-gray-500 mt-1">We'll respond within 24 hours</p>
                   </div>

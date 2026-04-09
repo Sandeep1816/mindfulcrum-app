@@ -1,4 +1,4 @@
-/** Canonical site URL for metadata, OG tags, sitemap, and JSON-LD. Set in production via NEXT_PUBLIC_SITE_URL */
+/** Canonical site URL for metadata, OG tags, sitemap, and JSON-LD. Production: https://www.mindfulcrum.in (NEXT_PUBLIC_SITE_URL). */
 export function getSiteUrl(): string {
   const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
   if (raw) return raw.replace(/\/$/, "");
@@ -25,7 +25,7 @@ export const siteSeo = {
     "burnout prevention",
   ],
   locale: "en_IN",
-  email: "hello@mindfulcrum.com",
+  email: "vincent@mindfulcrum.in",
   phone: "+911234567890",
   addressLocality: "Bangalore",
   addressRegion: "Karnataka",

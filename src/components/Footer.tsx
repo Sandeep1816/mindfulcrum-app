@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
+import { siteSeo } from "@/lib/seo/config";
 
 export function Footer() {
   return (
@@ -62,10 +63,10 @@ export function Footer() {
               <li className="flex gap-3">
                 <Mail size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
                 <a
-                  href="mailto:hello@mindfulcrum.com"
+                  href={`mailto:${siteSeo.email}`}
                   className="min-w-0 break-words leading-snug transition-colors hover:text-white"
                 >
-                  hello@mindfulcrum.com
+                  {siteSeo.email}
                 </a>
               </li>
               <li className="flex gap-3">
