@@ -14,7 +14,7 @@ export function ResourcesPage() {
             <ArrowLeft size={18} />
             Back to home
           </Link>
-          <h1 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">Resources</h1>
+          <h1 className="font-heading text-3xl font-semibold tracking-tight md:text-4xl">Resources</h1>
           <p className="mt-3 text-lg text-white/85">
             Mental health and suicide prevention helpline numbers — state-wise reference for India.
           </p>
@@ -35,7 +35,7 @@ export function ResourcesPage() {
           <div className="flex items-start gap-3">
             <Phone className="mt-1 h-6 w-6 shrink-0 text-[#c92a2a]" strokeWidth={2} />
             <div>
-              <h2 className="font-serif text-xl font-semibold text-[#1e3a5f]">{telemanasNational.title}</h2>
+              <h2 className="font-heading text-xl font-semibold text-[#1e3a5f]">{telemanasNational.title}</h2>
               <p className="mt-1 text-sm text-[#1e3a5f]/75">{telemanasNational.note}</p>
               <ul className="mt-4 flex flex-wrap gap-3">
                 {telemanasNational.numbers.map((n) => (
@@ -54,7 +54,7 @@ export function ResourcesPage() {
         <div className="mt-12 space-y-12">
           {stateHelplines.map((section) => (
             <section key={section.state} className="scroll-mt-24" id={slugify(section.state)}>
-              <h2 className="border-b border-gray-200 pb-2 font-serif text-2xl font-semibold text-[#1e3a5f]">
+              <h2 className="border-b border-gray-200 pb-2 font-heading text-2xl font-semibold text-[#1e3a5f]">
                 {section.state}
               </h2>
               <ul className="mt-6 space-y-6">

@@ -14,7 +14,7 @@ export function HomeHero() {
             <p className="mb-5 inline-flex max-w-full flex-wrap items-center rounded-sm border border-white/20 bg-white/5 px-3 py-2 text-[10px] font-semibold uppercase leading-snug tracking-[0.12em] text-white/95 backdrop-blur-sm sm:px-4 sm:text-xs sm:tracking-[0.18em]">
               Where Psychology Powers High-Performing Workplaces
             </p>
-            <h1 className="font-serif text-[clamp(1.75rem,5vw+0.75rem,3.25rem)] font-semibold leading-[1.12] tracking-tight md:leading-[1.1]">
+            <h1 className="font-heading text-[clamp(1.75rem,5vw+0.75rem,3.25rem)] font-semibold leading-[1.12] tracking-tight md:leading-[1.1]">
               Healthy Teams.
               <br />
               Strong Leaders.

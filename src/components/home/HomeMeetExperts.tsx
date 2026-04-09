@@ -16,7 +16,7 @@ export function HomeMeetExperts() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c92a2a]">Our team</p>
-            <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
               Meet Our Experts
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[#1e3a5f]/70">
@@ -40,7 +40,7 @@ export function HomeMeetExperts() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
-                  <h3 className="font-serif text-lg font-semibold text-[#1e3a5f]">{t.name}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-[#1e3a5f]">{t.name}</h3>
                   <p className="mt-1 text-sm font-medium text-[#c92a2a]">{t.specialty}</p>
                   <div className="mt-2 flex items-center gap-1.5 text-sm text-[#1e3a5f]/80">
                     <Star size={16} className="fill-[#c92a2a] text-[#c92a2a]" aria-hidden />

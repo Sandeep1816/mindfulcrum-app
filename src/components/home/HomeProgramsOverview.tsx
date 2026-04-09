@@ -39,7 +39,7 @@ export function HomeProgramsOverview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c92a2a]">Solutions</p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
             Comprehensive Solutions for Every Need
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[#1e3a5f]/70">
@@ -60,7 +60,7 @@ export function HomeProgramsOverview() {
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#1e3a5f] text-white shadow-sm">
                     <Icon size={24} strokeWidth={1.75} aria-hidden />
                   </div>
-                  <h3 className="mt-6 font-serif text-2xl font-semibold text-[#1e3a5f]">{program.title}</h3>
+                  <h3 className="mt-6 font-heading text-2xl font-semibold text-[#1e3a5f]">{program.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-[#1e3a5f]/70">{program.description}</p>
 
                   <ul className="mt-6 flex-1 space-y-3 border-t border-gray-100 pt-6">

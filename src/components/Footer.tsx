@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, Phone, Linkedin, MapPin } from "lucide-react";
-import { siteSeo } from "@/lib/seo/config";
+import { SITE_OFFICE_ADDRESS_LINES, siteSeo } from "@/lib/seo/config";
 
 export function Footer() {
   return (
@@ -71,18 +71,29 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Phone size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
-                <a href="tel:+911234567890" className="leading-snug hover:text-white transition-colors">
+                <a href={`tel:${siteSeo.phone.replace(/\s/g, "")}`} className="leading-snug hover:text-white transition-colors">
                   +91 12345 67890
                 </a>
               </li>
               <li className="flex gap-3">
                 <MapPin size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
-                <span className="leading-snug">Bangalore, India</span>
+                <address className="not-italic leading-snug">
+                  {SITE_OFFICE_ADDRESS_LINES.map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
+                </address>
               </li>
               <li className="flex gap-3">
                 <Linkedin size={18} className="mt-0.5 shrink-0 text-[#c92a2a]" strokeWidth={1.75} />
-                <a href="#" className="leading-snug hover:text-white transition-colors">
-                  LinkedIn
+                <a
+                  href={siteSeo.linkedinUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="leading-snug transition-colors hover:text-white"
+                >
+                  Mind Fulcrum Healthcare on LinkedIn
                 </a>
               </li>
             </ul>

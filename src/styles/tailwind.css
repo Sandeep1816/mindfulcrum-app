@@ -1,4 +1,4 @@
-@import 'tailwindcss' source(none);
-@source '../**/*.{js,ts,jsx,tsx}';
+/* Do not use source(none) here — it can yield zero scanned classes and an unstyled site. */
+@import "tailwindcss";
 
-@import 'tw-animate-css';
+@import "tw-animate-css";

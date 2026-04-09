@@ -151,7 +151,7 @@ export function BookingModal({ therapist, open, onClose }: Props) {
             <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50">
               <CheckCircle className="text-emerald-600" size={36} strokeWidth={2} />
             </div>
-            <h2 className="mt-6 font-serif text-2xl font-semibold text-[#1e3a5f]">Thank you!</h2>
+            <h2 className="mt-6 font-heading text-2xl font-semibold text-[#1e3a5f]">Thank you!</h2>
             <p className="mt-3 max-w-sm text-[15px] leading-relaxed text-[#1e3a5f]/75">
               Your consultation with <span className="font-semibold text-[#1e3a5f]">{therapist.name}</span> is
               confirmed for{" "}
@@ -191,7 +191,7 @@ export function BookingModal({ therapist, open, onClose }: Props) {
                   />
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h2 className="font-serif text-xl font-semibold leading-tight tracking-tight">{therapist.name}</h2>
+                  <h2 className="font-heading text-xl font-semibold leading-tight tracking-tight">{therapist.name}</h2>
                   <p className="mt-1 text-sm font-medium text-[#c92a2a]">{therapist.specialty}</p>
                   <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-white/75">
                     <span className="inline-flex items-center gap-1">
@@ -222,7 +222,7 @@ export function BookingModal({ therapist, open, onClose }: Props) {
             </div>
 
             <div className="min-h-0 flex-1 overflow-y-auto px-5 pb-5 pt-4">
-              <h3 className="text-center font-serif text-lg font-semibold text-[#1e3a5f]">
+              <h3 className="text-center font-heading text-lg font-semibold text-[#1e3a5f]">
                 Select a slot to book consultation
               </h3>
 

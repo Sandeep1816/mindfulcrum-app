@@ -29,7 +29,7 @@ export function HomeWhyChooseUs() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c92a2a]">Why us</p>
-          <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
+          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
             Why Leading Organizations Choose Mindfulcrum
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[#1e3a5f]/70">
@@ -46,7 +46,7 @@ export function HomeWhyChooseUs() {
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#1e3a5f] text-white shadow-inner">
                 <Icon size={26} strokeWidth={1.75} aria-hidden />
               </div>
-              <h3 className="mt-6 font-serif text-xl font-semibold text-[#1e3a5f]">{title}</h3>
+              <h3 className="mt-6 font-heading text-xl font-semibold text-[#1e3a5f]">{title}</h3>
               <p className="mt-3 flex-1 text-sm leading-relaxed text-[#1e3a5f]/70">{description}</p>
             </article>
           ))}

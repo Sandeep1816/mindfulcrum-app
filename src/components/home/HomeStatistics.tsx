@@ -16,7 +16,7 @@ export function HomeStatistics() {
               className="group relative overflow-hidden rounded-2xl border border-gray-200/80 bg-white p-8 text-center shadow-sm transition-shadow duration-300 hover:shadow-md"
             >
               <div className="absolute left-0 top-0 h-full w-1 bg-[#c92a2a]" aria-hidden />
-              <div className="font-serif text-4xl font-semibold tracking-tight text-[#1e3a5f] md:text-5xl">
+              <div className="font-heading text-4xl font-semibold tracking-tight text-[#1e3a5f] md:text-5xl">
                 {item.value}
               </div>
               <p className="mt-3 text-sm font-medium leading-snug text-[#1e3a5f]/70">{item.label}</p>

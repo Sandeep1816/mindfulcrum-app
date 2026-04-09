@@ -8,7 +8,7 @@ export function HomeBottomCta() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c92a2a]">Next step</p>
-        <h2 className="mt-3 font-serif text-3xl font-semibold tracking-tight text-white md:text-4xl">
+        <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-white md:text-4xl">
           Ready to Build a Mentally Strong Workplace?
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-lg leading-relaxed text-white/80">

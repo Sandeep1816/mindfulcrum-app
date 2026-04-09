@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-import { siteSeo } from "@/lib/seo/config";
+import { Mail, Phone, MapPin, Send, CheckCircle, Linkedin } from "lucide-react";
+import { SITE_OFFICE_ADDRESS_LINES, siteSeo } from "@/lib/seo/config";
 
 export function ContactPage() {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -117,12 +117,33 @@ export function ContactPage() {
                     <MapPin className="text-green-600" size={20} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-                    <p className="text-gray-600">
-                      Bangalore, Karnataka<br />
-                      India
-                    </p>
-                    <p className="text-sm text-gray-500 mt-1">Serving organizations nationwide</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">Office</h3>
+                    <p className="text-sm font-medium text-gray-800">{siteSeo.legalName}</p>
+                    <address className="mt-1 not-italic text-gray-600">
+                      {SITE_OFFICE_ADDRESS_LINES.map((line) => (
+                        <span key={line} className="block">
+                          {line}
+                        </span>
+                      ))}
+                    </address>
+                    <p className="mt-2 text-sm text-gray-500">Serving organizations nationwide</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-sky-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Linkedin className="text-sky-700" size={20} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-1">LinkedIn</h3>
+                    <a
+                      href={siteSeo.linkedinUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="break-all text-gray-600 hover:text-indigo-600"
+                    >
+                      {siteSeo.linkedinUrl}
+                    </a>
                   </div>
                 </div>
               </div>
