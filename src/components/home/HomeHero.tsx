@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 export function HomeHero() {
   return (
     <section className="relative overflow-hidden bg-[#1e3a5f] text-white">
-      {/* Soft ambient light for better mobile responsiveness and better desktop responsiveness */}
+      {/* Soft ambient light for better mobile responsiveness and better desktop responsiveness .. */}
       <div
         className="pointer-events-none absolute -right-24 -top-24 h-[28rem] w-[28rem] rounded-full bg-[#c92a2a]/15 blur-[100px] sm:h-[34rem] sm:w-[34rem]"
         aria-hidden
