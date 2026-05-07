@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { MAIN_NAV_LINKS } from "@/data/site-navigation";
 import { NavigationJsonLd } from "@/components/seo/NavigationJsonLd";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { getSiteUrl, siteSeo } from "@/lib/seo/config";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteSeo.name}`,
   },
   description: siteSeo.description,
-  keywords: [...siteSeo.keywords],
+  keywords: [...siteSeo.keywords, ...MAIN_NAV_LINKS.map((item) => item.label)],
   authors: [{ name: siteSeo.name, url: siteUrl }],
   creator: siteSeo.name,
   publisher: siteSeo.name,

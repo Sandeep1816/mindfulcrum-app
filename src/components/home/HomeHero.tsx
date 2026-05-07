@@ -19,29 +19,24 @@ export function HomeHero() {
       <div className="absolute inset-0 bg-gradient-to-br from-[#1e3a5f] via-[#1e3a5f]/98 to-[#152a45]" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16">
-          <div className="order-2 flex flex-col lg:order-1">
+        <div className="grid grid-cols-1 items-center gap-12 md:gap-14 lg:grid-cols-[1.4fr_1.1fr] lg:gap-10 xl:gap-12">
+          <div className="order-2 flex flex-col lg:order-1 lg:pr-8 xl:pr-12">
             <div className="space-y-5">
               <p className="inline-flex w-fit max-w-full flex-wrap items-center rounded-full border border-white/15 bg-white/[0.07] px-3.5 py-2 text-[10px] font-semibold uppercase leading-snug tracking-[0.14em] text-white/90 shadow-sm shadow-black/10 backdrop-blur-sm sm:px-4 sm:text-[11px] sm:tracking-[0.16em]">
-                Where Psychology Powers High-Performing Workplaces
+                Where mental balance meets workplace wellbeing
               </p>
               <div className="h-1 w-11 rounded-full bg-[#c92a2a]" aria-hidden />
-              <h1 className="font-heading text-[clamp(1.5rem,3.6vw+0.35rem,2.65rem)] font-semibold leading-[1.2] tracking-tight text-balance text-white drop-shadow-sm md:leading-[1.15]">
-                Build Resilient Teams.
-                <br />
-                Develop Leaders Who Deliver.
-                <br />
-                Create Organizations That Thrive.
+              <h1 className="font-heading text-[clamp(1.12rem,1.45vw+0.5rem,1.72rem)] font-semibold leading-[1.24] tracking-tight text-white drop-shadow-sm lg:leading-[1.16]">
+                <span className="block lg:whitespace-nowrap">Build Teams That Don&apos;t Break Under Pressure</span>
+                <span className="block lg:whitespace-nowrap">Develop Leaders Who Drive Real Results</span>
+                <span className="block lg:whitespace-nowrap">Create Organizations That Outperform, Consistently</span>
               </h1>
             </div>
 
             <div className="mt-7 max-w-xl space-y-4 border-l-2 border-white/10 pl-5 sm:pl-6">
               <p className="text-base leading-relaxed text-white/[0.88] md:text-[1.05rem] md:leading-relaxed">
-                Mindfulcrum partners with forward-thinking Organizations to reduce burnout, elevate leadership performance
-                and build psychologically strong workplaces through structured, data-driven interventions.
-              </p>
-              <p className="text-sm leading-relaxed text-white/60 md:text-[0.95rem]">
-                Designed for Organizations who demand measurable impact, not just engagement.
+                Mindfulcrum partners with forward-thinking organizations to reduce burnout, strengthen leadership &
+                build high-performance, psychologically resilient workplaces.
               </p>
             </div>
 
@@ -60,10 +55,10 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="relative order-1 lg:order-2">
+          <div className="relative order-1 lg:order-2 lg:pl-0 xl:pl-1">
             <div className="absolute -inset-1 rounded-[1.125rem] bg-gradient-to-br from-[#c92a2a]/35 via-transparent to-[#1e3a5f]/20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.125rem] border border-white/20 bg-[#152a45]/50 shadow-2xl shadow-black/30 ring-1 ring-white/10">
-              <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:aspect-auto lg:min-h-[30rem] xl:min-h-[36rem]">
+            <div className="relative ml-auto w-full max-w-none overflow-hidden rounded-[1.125rem] border border-white/20 bg-[#152a45]/50 shadow-2xl shadow-black/30 ring-1 ring-white/10">
+              <div className="relative aspect-[4/5] w-full sm:aspect-[4/3] lg:aspect-auto lg:min-h-[30rem] xl:min-h-[35rem]">
                 <Image
                   src="/images/herotwo.jpeg"
                   alt="Workplace collaboration and resilient teams"

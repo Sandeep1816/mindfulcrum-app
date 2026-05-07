@@ -27,9 +27,9 @@ export function HomeWhyChooseUs() {
   return (
     <section className="py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#c92a2a]">Why us</p>
-          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-4xl">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="text-base font-bold uppercase tracking-[0.28em] text-[#c92a2a] md:text-lg">Why us</p>
+          <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight text-[#1e3a5f] md:text-[2.05rem] lg:whitespace-nowrap">
             Why Leading Organizations Choose Mindfulcrum
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-[#1e3a5f]/70">
@@ -41,13 +41,13 @@ export function HomeWhyChooseUs() {
           {pillars.map(({ icon: Icon, title, description }) => (
             <article
               key={title}
-              className="flex flex-col rounded-2xl border border-gray-200/90 bg-white p-8 shadow-sm transition-all duration-300 hover:border-[#c92a2a]/35 hover:shadow-md"
+              className="flex h-full min-h-[17rem] flex-col rounded-2xl border border-gray-200/90 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-[#c92a2a]/35 hover:shadow-md"
             >
               <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#1e3a5f] text-white shadow-inner">
                 <Icon size={26} strokeWidth={1.75} aria-hidden />
               </div>
-              <h3 className="mt-6 font-heading text-xl font-semibold text-[#1e3a5f]">{title}</h3>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#1e3a5f]/70">{description}</p>
+              <h3 className="mt-5 font-heading text-[1.15rem] font-semibold text-[#1e3a5f]">{title}</h3>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-[#1e3a5f]/75">{description}</p>
             </article>
           ))}
         </div>

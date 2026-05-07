@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { HomeHero } from "@/components/home/HomeHero";
-import { HomeTaglineBar } from "@/components/home/HomeTaglineBar";
-import { HomeStatistics } from "@/components/home/HomeStatistics";
 import { HomeWhyChooseUs } from "@/components/home/HomeWhyChooseUs";
 import { HomeMeetExperts } from "@/components/home/HomeMeetExperts";
 import { HomeProgramsOverview } from "@/components/home/HomeProgramsOverview";
@@ -25,8 +23,6 @@ export default function Page() {
     <div className="bg-white">
       <HomeStructuredData />
       <HomeHero />
-      <HomeTaglineBar />
-      <HomeStatistics />
       <HomeWhyChooseUs />
       <HomeMeetExperts />
       <HomeProgramsOverview />
